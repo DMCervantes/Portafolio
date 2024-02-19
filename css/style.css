@@ -1,0 +1,67 @@
+body{
+    /* background-color: black;   */
+    background-image: url('../img/galaxiaAzul.jpg'); 
+      background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+    }
+    main {
+        /* margenes para desktop */
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @keyframes moveGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .Parrafo1{
+        font-family: 'Cantata One', sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+    .Parrafo2{
+        font-family: 'Sofia', sans-serif;
+        font-size: 60px;
+        padding: 0px;
+        margin: 0px;
+        color: #ffffff;
+        background: linear-gradient(135deg, #000000,#000000,#1eedfc, #ffffff 50%); /* Degradado */
+        background-size: 200% 200%; /* Aumenta el tamaño del degradado para permitir el movimiento */
+        color: transparent; /* Hace que el texto sea transparente */
+        -webkit-background-clip: text; /* Clip de fondo para que el degradado solo se aplique al texto */
+        background-clip: text; /* Propiedad estándar para compatibilidad */
+        animation: moveGradient 5s infinite; /* Animación de movimiento */
+        
+    }
+    
+    .Parrafo3{
+        font-family: 'Cantata One', sans-serif;
+        font-size: 24px;
+        color: rgb(140, 236, 188);
+        font-weight: bolder;
+        display:inline;
+    
+    }
+    
+    .Parrafo4{
+        font-family: 'Cantata One', sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: justify;
+        margin-top: 5px;
+    }
+    .imagePerfil:hover {
+        cursor: cell;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        /* margenes para dispositivos móviles */
+        main {
+            padding-top: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+       
+    }
