@@ -1,0 +1,315 @@
+/*Estilos Generales*/
+html, body {
+    /* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+    background-color: black;/*#383838;*/
+}
+section{
+    margin-top: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/*Navbar*/
+nav>*{
+    
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    top: 0; 
+}
+nav a{ 
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: 'Cantata One', sans-serif;
+    font-size: 20px;
+
+}
+/*Para construir la linea no es lo mismo esta linea a la de url*/
+nav a::before{
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #7a8d9b;
+    transition: .3s;
+}
+/*indica cuando va a suceder la aparición de la linea*/
+nav a:hover::before{
+    width: 100%; /*cuanto de la "a" abarcara la linea*/
+}
+/*Home*/
+.Parrafo1{
+    font-family: 'Cantata One', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.Parrafo2{
+    font-family:"Alfa Slab One", serif;
+    font-size: 50px;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8f7193,#8f7193,#c0a0c3, #efdfe9 50%); /* Degradado */
+    background-size: 200% 200%; /* Aumenta el tamaño del degradado para permitir el movimiento */
+    color: transparent; /* Hace que el texto sea transparente */
+    -webkit-background-clip: text; /* Clip de fondo para que el degradado solo se aplique al texto */
+    background-clip: text; /* Propiedad estándar para compatibilidad */
+    animation: moveGradient 5s infinite; /* Animación de movimiento */
+    
+}
+.btnCv{ 
+    position: relative;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Cantata One', sans-serif;
+    color: white;
+
+}
+/*Para construir la linea no es lo mismo esta linea a la de url*/
+.btnCv::before{
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #8f7193;
+    transition: .3s;
+}
+/*indica cuando va a suceder la aparición de la linea*/
+.btnCv:hover::before{
+    width: 100%; /*cuanto de la "a" abarcara la linea*/
+}
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.Parrafo3{
+    font-family: 'Cantata One', sans-serif;
+    font-size: 20px;
+    padding: 0px;
+        margin: 0px;
+    color: #7a8d9b;
+    font-weight: bolder;
+    display:inline;
+
+}
+.foto{
+    height: 300px;
+    border-radius: 100px;
+}
+.Parrafo4{
+    font-family: 'Cantata One', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.tooltip-container {
+    position: relative;
+    --background: #242227;
+    background: var(--background);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: auto; /* Set a fixed width */
+    height:  auto; /* Set a fixed height */
+    padding: 0.7em 1.8em;
+    border-radius: 8px;
+    color: #fff;
+    display: flex; /* Change this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+    transition: box-shadow 0.3s ease;
+}
+  .tooltip-container:hover {
+    box-shadow: 2px 0 25px #c0a0c3; /* Sombra al pasar el mouse */
+}
+  .tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transform-origin: bottom;
+    padding: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    background: var(--background);
+    border-radius: 4px;
+  }
+  
+  .tooltip::before { /*Para el triangulito del tooltip*/
+    position: absolute;
+    content: "";
+    height: 0.9em;
+    width: 0.9em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: var(--background);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+  }
+  .tooltip-container:hover {
+    transform: scale(0.9);
+  }
+  
+  .imagen-contenedor {
+    width: 90px;
+    height: 80px;
+}
+.card-contact {
+    background:  #c0a0c3;
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid  #7a8d9b;
+    box-shadow: 0 6px 15px rgb(245, 169, 228);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    margin: auto;
+  }
+  
+  .card-contact:hover {
+    transform: translateY(-10px);
+  }
+  
+  .user-picture {
+    overflow: hidden;
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border: 4px solid  #7a8d9b;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .user-picture svg {
+    width: 2.5rem;
+    fill: currentColor;
+  }
+  
+  .datos{
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+    font-family: 'Cantata One', sans-serif;
+    font-size: 18px;
+  }
+  
+  .datos span {
+    display: block;
+    font-weight: 200;
+    font-size: 16px;
+  }
+  
+  .social-media:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background:  #7a8d9b;
+  }
+  
+  .social-media a {
+    position: relative;
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .social-media a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-media a svg {
+    width: 1.1rem;
+    fill: currentColor;
+  }
+  .social-media a img {
+    width: 2.1rem;
+    fill: currentColor;
+  }
+  
+  
+  /*-- Tooltip Social Media --*/
+  .tooltip-social {
+    background: #262626;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0.5rem 0.4rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -90%);
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+  
+  .tooltip-social:after {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    border: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: transparent;
+    transform: translate(-50%, 100%);
+  }
+  
+  .social-media a .tooltip-social:after {
+    border-top-color: #262626;
+  }
+  
+  .social-media a:hover .tooltip-social {
+    opacity: 1;
+    transform: translate(-50%, -130%);
+  }
+@media only screen and (max-width: 425px) {
+    section{
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+/* Para tabletas (de 425px a 768px) */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .home {
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  
+}
